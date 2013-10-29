@@ -1,1 +1,7 @@
-{"name":"(def shef)","tagline":"A monthly functional programming meetup in Sheffield","body":"## (def shef 1)\r\n12th November - 6:30pm - Electric Works\r\n\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
+{
+  "name": "(def shef)",
+  "tagline": "A monthly functional programming meetup in Sheffield",
+  "body": "## (def shef 1)\r\n12th November - 6:30pm - Electric Works\r\n\r\nRound Table: What's cool about Functional Programming.\r\n\r\nWe'll also have an open discussion on future plans for the group.",
+  "google": "",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
