@@ -1,0 +1,22 @@
+{
+  "name": "defshef.github.io",
+  "version": "0.0.0",
+  "description": "(def shef) website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/defshef/defshef.github.io.git"
+  },
+  "author": "Glen Mailer <glenjamin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/defshef/defshef.github.io/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-sass": "~0.8.0"
+  }
+}
