@@ -5,7 +5,15 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}'],
-                tasks: ['sass:dist']
+                tasks: ['sass:dist', 'notify:sass']
+            }
+        },
+
+        notify: {
+            sass: {
+                options: {
+                    message: 'Sass Complete'
+                }
             }
         },
 
@@ -20,6 +28,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['sass:dist', 'watch']);
 
+    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
 }
