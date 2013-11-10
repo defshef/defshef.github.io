@@ -1,0 +1,46 @@
+.row {
+  @include grid-row;
+}
+.all-columns {
+  @include grid-column($total-columns);
+}
+
+header {
+  border-bottom: 1px dashed $header-font-color;
+  margin-bottom: em-calc(30);
+
+  hgroup {
+    @include grid-column($total-columns);
+  }
+  h1 {
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+  .subheader {
+    font-size: 0.6em;
+    display: block;
+  }
+}
+
+.meeting-info {
+  font-weight: bold;
+  color: #fff;
+}
+.meeting-signup {
+  text-align: center;
+}
+.meeting-button {
+  @include button-base;
+  @include button-size($button-sml);
+  @include button-style($radius:true);
+  @include inset-shadow();
+  @include single-transition(background-color);
+}
+
+footer {
+  border-top: 1px dashed $header-font-color;
+  margin-top: em-calc(20);
+  padding: em-calc(20) 0;
+  overflow: hidden;
+  text-align: center;
+}
