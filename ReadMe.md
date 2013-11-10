@@ -10,13 +10,13 @@ The SASS on this website is built via grunt.
 
 The following commands will install grunt and this project's dependencies
 
-  git submodule update --init
-  npm install -g grunt-cli
-  npm install
+    git submodule update --init
+    npm install -g grunt-cli
+    npm install
 
 You can then build and run the website via
 
-  grunt
+    grunt
 
 This will build the SASS, start a dev server at localhost:8888, and rebuild the
 SASS after every change
