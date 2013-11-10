@@ -10,6 +10,7 @@ The SASS on this website is built via grunt.
 
 The following commands will install grunt and this project's dependencies
 
+  git submodule update --init
   npm install -g grunt-cli
   npm install
 
