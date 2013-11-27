@@ -37,6 +37,18 @@ header {
   @include single-transition(background-color);
 }
 
+ol {
+  li {
+    margin-bottom: $paragraph-margin-bottom;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+.tag {
+  @include label($bg:$primary-color + #333, $radius:true);
+}
+
 footer {
   border-top: 1px dashed $header-font-color;
   margin-top: em-calc(20);

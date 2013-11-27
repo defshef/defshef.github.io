@@ -273,6 +273,26 @@ header {
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
 
+ol li {
+  margin-bottom: 1.25em; }
+  ol li p {
+    margin-bottom: 0; }
+
+.tag {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  padding: 0.1875em 0.625em 0.25em;
+  font-size: 0.875em;
+  background-color: #96f3ff;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
 footer {
   border-top: 1px dashed #b5e853;
   margin-top: 1.25em;
