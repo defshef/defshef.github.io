@@ -215,6 +215,10 @@ ol li ul, ol li ol {
   width: 100%;
   float: left; }
 
+code {
+  color: #cc99cc;
+  font-size: 1.25em; }
+
 header {
   border-bottom: 1px dashed #b5e853;
   margin-bottom: 1.875em; }

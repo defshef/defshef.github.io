@@ -5,6 +5,11 @@
   @include grid-column($total-columns);
 }
 
+code {
+  color: #c9c;
+  font-size: em-calc(20);
+}
+
 header {
   border-bottom: 1px dashed $header-font-color;
   margin-bottom: em-calc(30);

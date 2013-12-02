@@ -36,25 +36,90 @@
 <p>In order to get the most from these exercises, I recommend avoiding the helper functions in the core library of your chosen language and using the functional programming primitives I&#39;ve <span class="tag">tagged</span> each problem with.</p>
 <h2 id="warmup">Warmup</h2>
 <ol>
-<li><p>Get the nth element in a list where the first item is &#39;1&#39;</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">get-element</span> <span class="collection">[<span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span> ]</span><span class="number"> 3</span>)</span>
- <span class="comment">;=&gt; 7</span></code></pre>
-<p> <span class="tag">Recursion</span></p>
+<li><p>Double all the numbers in a list</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">doubled</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span> ]</span>)</span>
+ <span class="comment">;=&gt; [ 2 4 6 8 ]</span></code></pre>
+<p> <span class="tag">Map</span></p>
+</li>
+<li><p>Extract all the even numbers from a list</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">evens</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span> ]</span>)</span>
+ <span class="comment">;=&gt; [ 1 3 5 7 ]</span></code></pre>
+<p> <span class="tag">Filter</span></p>
+</li>
+<li><p>Multiply all the numbers in a list together</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">multiplied</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span> ]</span>)</span>
+ <span class="comment">;=&gt; 120</span></code></pre>
+<p> <span class="tag">Reduce</span></p>
 </li>
 <li><p>Reverse a list</p>
 <pre><code class="lang-clojure"> <span class="list">(<span class="title">reverse-list</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span> ]</span>)</span>
  <span class="comment">;=&gt; [ 5 4 3 2 1 ]</span></code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
+<li><p>Get the nth element in a list where the first item is &#39;1&#39;</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">get-element</span> <span class="collection">[<span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span> ]</span><span class="number"> 3</span>)</span>
+ <span class="comment">;=&gt; 7</span></code></pre>
+<p> <span class="tag">Recursion</span></p>
+</li>
+</ol>
+<h2 id="beginner">Beginner</h2>
+<ol>
 <li><p>Calculate the sum of the squares of all odd numbers in a list</p>
 <pre><code class="lang-clojure"> <span class="list">(<span class="title">odd-square-sum</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span><span class="number"> 9</span> ]</span>)</span>
  <span class="comment">;=&gt; 155</span></code></pre>
 <p> <span class="tag">Filter</span> <span class="tag">Map</span> <span class="tag">Reduce</span></p>
 </li>
+<li><p>Extract a slice from a list</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">slice</span> <span class="collection">[<span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span><span class="number"> 9</span> ]</span><span class="number"> 2</span><span class="number"> 4</span>)</span>
+ <span class="comment">;=&gt; [ 5 6 7 8 ]</span></code></pre>
+<p> <span class="tag">Recursion</span></p>
+</li>
+<li><p>Generate the first n items of the fibonacci series.</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">fibn</span><span class="number"> 9</span>)</span>
+ <span class="comment">;=&gt; [ 1 1 2 3 5 8 13 ]</span></code></pre>
+<p> <span class="tag">Recursion</span></p>
+</li>
+<li><p>Improve the performance of the <code>fibn</code> function by adding memoisation.</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">fibn'</span><span class="number"> 9</span>)</span>
+ <span class="comment">; =&gt; [ 1 1 2 3 5 8 13 ]</span>
+ <span class="comment">; only recurses 7 times</span></code></pre>
+<p> <span class="tag">Recursion</span></p>
+</li>
 </ol>
-<h2 id="beginner">Beginner</h2>
 <h2 id="experienced">Experienced</h2>
+<ol>
+<li><p>Flatten a nested list</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title"><span class="built_in">flatten</span></span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span> <span class="collection">[<span class="number"> 7</span><span class="number"> 8</span><span class="number"> 9</span> ]</span><span class="number"> 10</span><span class="number"> 11</span><span class="number"> 12</span> ]</span> ]</span>)</span>
+ <span class="comment">;=&gt; [ 1 2 3 4 5 6 7 8 9 10 11 12 ]</span></code></pre>
+<pre><code class="lang-haskell"> <span class="comment">-- Nested List type for haskell</span>
+ <span class="typedef"><span class="keyword">data</span> <span class="type">Nested</span> a = <span class="type">Item</span> a | <span class="type">List</span> [<span class="type">Nested</span> a] <span class="keyword">deriving</span> <span class="container">(<span class="type">Show</span>)</span></span>
+ <span class="type">List</span> [<span class="type">Item</span> <span class="number">1</span>, <span class="type">Item</span> <span class="number">2</span>, <span class="type">List</span> [<span class="type">Item</span> <span class="number">1</span>, <span class="type">Item</span> <span class="number">2</span>]]</code></pre>
+<p> <span class="tag">Recursion</span></p>
+</li>
+<li><p>Replace all occurences of an item with another in a nested list</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">substitute</span><span class="number"> 2</span><span class="number"> 5</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 2</span><span class="number"> 3</span> ]</span> <span class="collection">[<span class="number"> 1</span> <span class="collection">[<span class="number"> 2</span> ]</span><span class="number"> 3</span> ]</span> ]</span>)</span>
+ <span class="comment">;=&gt; [ 1 5 3 [ 1 5 3 ] [ 1 5 5 3] [ 1 [ 5 ] 3 ]]</span></code></pre>
+<p> <span class="tag">Recursion</span></p>
+</li>
+<li><p>Implement <code>deep-map</code>, <code>deep-filter</code> and <code>deep-reduce</code> which operate on nested
+lists.</p>
+<p>Use them to calculate the sum of all the squares of odd numbers in a
+nested list (see beginner #1)</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">odd-square-sum-deep</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span> <span class="collection">[<span class="number"> 6</span><span class="number"> 7</span> <span class="collection">[<span class="number"> 8</span> ]</span><span class="number"> 9</span> ]</span> ]</span>)</span>
+ <span class="comment">;=&gt; 155</span></code></pre>
+<p> <span class="tag">Recursion</span> <span class="tag">Map</span> <span class="tag">Filter</span> <span class="tag">Reduce</span></p>
+</li>
+<li><p>Implement <code>odd-square-sum-deep</code> using <code>flatten</code>. Which version is
+preferrable?</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">odd-square-sum-deep</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span> <span class="collection">[<span class="number"> 6</span><span class="number"> 7</span> <span class="collection">[<span class="number"> 8</span> ]</span><span class="number"> 9</span> ]</span> ]</span>)</span>
+ <span class="comment">;=&gt; 155</span></code></pre>
+<p><span class="tag">Map</span> <span class="tag">Filter</span> <span class="tag">Reduce</span></p>
+</li>
+</ol>
 <h2 id="expert">Expert</h2>
+<ol>
+<li>???</li>
+</ol>
 
   </div>
 </div>
