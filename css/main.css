@@ -277,11 +277,14 @@ header {
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
 
-ol li {
-  margin-bottom: 1.25em; }
-  ol li p {
-    margin-bottom: 0; }
-
+/*ol {
+  li {
+    margin-bottom: $paragraph-margin-bottom;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}*/
 .tag {
   font-weight: bold;
   text-align: center;

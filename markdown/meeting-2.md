@@ -1,6 +1,6 @@
 # Functional Programming Problems
 
-Blah blah problems, Haskell clojure blah blah.
+I've put together a bunch of problems for us to have a go at. Feel free to use whatever functional programming language you like to solve these. If you don't already know one, I suggest Clojure or Haskell as there will be people around to help.
 
 In order to get the most from these exercises, I recommend avoiding the helper functions in the core library of your chosen language and using the functional programming primitives I've <tag>tagged</tag> each problem with.
 
@@ -114,4 +114,70 @@ In order to get the most from these exercises, I recommend avoiding the helper f
 
 ## Expert
 
-1. ???
+1. Announce the winner of tic-tac-toe
+
+    pick an appropriate 2d structure for your language
+    ```clojure
+    (winner [ [ :o :e :x ]
+              [ :o :x :e ]
+              [ :x :e :e ] ])
+    ;=> :x
+    ```
+    ```haskell
+    winner [["x","o"," "]
+            [" ","o"," "]
+            ["x","o"," "]]
+    -- => "o"
+    ```
+
+2. Implement a basic DSL evaluator that provides the following primitives:
+
+    * `Number`          - any integer
+    * `List`            - a list of numbers
+    * `(cowering n)`    - double the value of the number
+    * `(burrito n m)`   - create a list containing `n` `m` times
+    * `(tap n)`         - increment the number by one
+    * `(steel n)`       - decrement the number by one
+    * `(sheffield l n)` - append `n` to the list `l`
+    * `(meatspace l)`   - get the first item of a list
+    * `(geek l1 l2)`    - Combine l1 and l2 into a single list
+
+    ```clojure
+    ; Clojure example
+    (defshef
+        '(geek
+            (burrito (meatspace (burrito 1 (tap 4))) 1)
+            (sheffield
+                (burrito (steel (cowering 2)) 2)
+                (steel (cowering (cowering (tap 1)))))))
+    ;=> ???
+    ```
+
+    If you're not using a lisp, don't worry about trying to parse some input into a syntax tree, just define a data-type to use as your syntax tree.
+
+    ```haskell
+    -- Haskell example
+    data DefShef =
+        N Int
+        | L [Int]
+        | Cowering DefShef
+        | Burrito DefShef DefShef
+        | Tap DefShef
+        | Steel DefShef
+        | Sheffield DefShef DefShef
+        | Meatspace DefShef
+        | Geek DefShef DefShef
+        deriving (Show)
+
+    defshef :: DefShef -> DefShef
+    -- implement defshef
+
+    defshef (Geek
+        (Burrito (Meatspace (Burrito (N 1) (Tap (N 4)))) (N 1))
+        (Sheffield
+            (Burrito (Steel (Cowering (N 2))) (N 2))
+            (Steel (Cowering (Cowering (Tap (N 1)))))))
+    -- => ???
+    ```
+
+

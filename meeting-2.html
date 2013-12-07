@@ -32,7 +32,7 @@
 <div class="row">
   <div class="all-columns">
     <h1 id="functional-programming-problems">Functional Programming Problems</h1>
-<p>Blah blah problems, Haskell clojure blah blah.</p>
+<p>I&#39;ve put together a bunch of problems for us to have a go at. Feel free to use whatever functional programming language you like to solve these. If you don&#39;t already know one, I suggest Clojure or Haskell as there will be people around to help.</p>
 <p>In order to get the most from these exercises, I recommend avoiding the helper functions in the core library of your chosen language and using the functional programming primitives I&#39;ve <span class="tag">tagged</span> each problem with.</p>
 <h2 id="warmup">Warmup</h2>
 <ol>
@@ -118,7 +118,62 @@ preferrable?</p>
 </ol>
 <h2 id="expert">Expert</h2>
 <ol>
-<li>???</li>
+<li><p>Announce the winner of tic-tac-toe</p>
+<p> pick an appropriate 2d structure for your language</p>
+<pre><code class="lang-clojure"> <span class="list">(<span class="title">winner</span> <span class="collection">[ <span class="collection">[ <span class="attribute">:o</span> <span class="attribute">:e</span> <span class="attribute">:x</span> ]</span>
+           <span class="collection">[ <span class="attribute">:o</span> <span class="attribute">:x</span> <span class="attribute">:e</span> ]</span>
+           <span class="collection">[ <span class="attribute">:x</span> <span class="attribute">:e</span> <span class="attribute">:e</span> ]</span> ]</span>)</span>
+ <span class="comment">;=&gt; :x</span></code></pre>
+<pre><code class="lang-haskell"> winner [[<span class="string">"x"</span>,<span class="string">"o"</span>,<span class="string">" "</span>]
+         [<span class="string">" "</span>,<span class="string">"o"</span>,<span class="string">" "</span>]
+         [<span class="string">"x"</span>,<span class="string">"o"</span>,<span class="string">" "</span>]]
+ <span class="comment">-- =&gt; "o"</span></code></pre>
+</li>
+<li><p>Implement a basic DSL evaluator that provides the following primitives:</p>
+<ul>
+<li><code>Number</code>          - any integer</li>
+<li><code>List</code>            - a list of numbers</li>
+<li><code>(cowering n)</code>    - double the value of the number</li>
+<li><code>(burrito n m)</code>   - create a list containing <code>n</code> <code>m</code> times</li>
+<li><code>(tap n)</code>         - increment the number by one</li>
+<li><code>(steel n)</code>       - decrement the number by one</li>
+<li><code>(sheffield l n)</code> - append <code>n</code> to the list <code>l</code></li>
+<li><code>(meatspace l)</code>   - get the first item of a list</li>
+<li><p><code>(geek l1 l2)</code>    - Combine l1 and l2 into a single list</p>
+<pre><code class="lang-clojure"><span class="comment">; Clojure example</span>
+<span class="list">(<span class="title">defshef</span>
+  '<span class="list">(<span class="title">geek</span>
+      <span class="list">(<span class="title">burrito</span> <span class="list">(<span class="title">meatspace</span> <span class="list">(<span class="title">burrito</span><span class="number"> 1</span> <span class="list">(<span class="title">tap</span><span class="number"> 4</span>)</span>)</span>)</span><span class="number"> 1</span>)</span>
+      <span class="list">(<span class="title">sheffield</span>
+          <span class="list">(<span class="title">burrito</span> <span class="list">(<span class="title">steel</span> <span class="list">(<span class="title">cowering</span><span class="number"> 2</span>)</span>)</span><span class="number"> 2</span>)</span>
+          <span class="list">(<span class="title">steel</span> <span class="list">(<span class="title">cowering</span> <span class="list">(<span class="title">cowering</span> <span class="list">(<span class="title">tap</span><span class="number"> 1</span>)</span>)</span>)</span>)</span>)</span>)</span>)</span>
+<span class="comment">;=&gt; ???</span></code></pre>
+<p>If you&#39;re not using a lisp, don&#39;t worry about trying to parse some input into a syntax tree, just define a data-type to use as your syntax tree.</p>
+<pre><code class="lang-haskell"><span class="comment">-- Haskell example</span>
+<span class="typedef"><span class="keyword">data</span> <span class="type">DefShef</span> =</span>
+  <span class="type">N</span> <span class="type">Int</span>
+  | <span class="type">L</span> [<span class="type">Int</span>]
+  | <span class="type">Cowering</span> <span class="type">DefShef</span>
+  | <span class="type">Burrito</span> <span class="type">DefShef</span> <span class="type">DefShef</span>
+  | <span class="type">Tap</span> <span class="type">DefShef</span>
+  | <span class="type">Steel</span> <span class="type">DefShef</span>
+  | <span class="type">Sheffield</span> <span class="type">DefShef</span> <span class="type">DefShef</span>
+  | <span class="type">Meatspace</span> <span class="type">DefShef</span>
+  | <span class="type">Geek</span> <span class="type">DefShef</span> <span class="type">DefShef</span>
+  <span class="keyword">deriving</span> (<span class="type">Show</span>)
+
+<span class="title">defshef</span> :: <span class="type">DefShef</span> -&gt; <span class="type">DefShef</span>
+<span class="comment">-- implement defshef</span>
+
+<span class="title">defshef</span> (<span class="type">Geek</span>
+  (<span class="type">Burrito</span> (<span class="type">Meatspace</span> (<span class="type">Burrito</span> (<span class="type">N</span> <span class="number">1</span>) (<span class="type">Tap</span> (<span class="type">N</span> <span class="number">4</span>)))) (<span class="type">N</span> <span class="number">1</span>))
+  (<span class="type">Sheffield</span>
+      (<span class="type">Burrito</span> (<span class="type">Steel</span> (<span class="type">Cowering</span> (<span class="type">N</span> <span class="number">2</span>))) (<span class="type">N</span> <span class="number">2</span>))
+      (<span class="type">Steel</span> (<span class="type">Cowering</span> (<span class="type">Cowering</span> (<span class="type">Tap</span> (<span class="type">N</span> <span class="number">1</span>)))))))
+<span class="comment">-- =&gt; ???</span></code></pre>
+</li>
+</ul>
+</li>
 </ol>
 
   </div>

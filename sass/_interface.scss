@@ -42,14 +42,14 @@ header {
   @include single-transition(background-color);
 }
 
-ol {
+/*ol {
   li {
     margin-bottom: $paragraph-margin-bottom;
     p {
       margin-bottom: 0;
     }
   }
-}
+}*/
 .tag {
   @include label($bg:$primary-color + #333, $radius:true);
 }
