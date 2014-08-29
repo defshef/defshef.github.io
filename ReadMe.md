@@ -10,7 +10,7 @@ The SASS on this website is built via grunt.
 
 The following commands will install grunt and this project's dependencies
 
-    git submodule update --init
+    git clone https://github.com/zurb/foundation.git
     npm install -g grunt-cli
     npm install
 
