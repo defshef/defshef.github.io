@@ -11,7 +11,8 @@ The SASS on this website is built via grunt.
 The following commands will install grunt and this project's dependencies
 
     git clone https://github.com/zurb/foundation.git
-    cd foundation && git checkout bea8ac314 && cd -
+    curl -L https://github.com/zurb/foundation/archive/bea8ac314a88da805802f27603001aca4dd93cc7.tar.gz | tar zx
+    mv foundation-bea8* foundation
     npm install -g grunt-cli
     npm install
 
