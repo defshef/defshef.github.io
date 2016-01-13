@@ -3,6 +3,16 @@ The (def shef) Website
 
 Please feel free to submit fixes and improvements via pull requests
 
+Announcing Meetups
+------------------
+
+To announce a meetup
+
+  1. Add the details to `index.html`
+  2. Create an even on [Open Tech Calendar](https://opentechcalendar.co.uk/group/235-def-shef)
+  3. Post the details to the [Mailing List](https://groups.google.com/forum/#!forum/def-shef)
+  4. Schedule a bunch of tweets between now and the meetup via buffer.
+
 Building
 --------
 
