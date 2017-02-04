@@ -39,82 +39,96 @@
 <h2 id="warmup">Warmup</h2>
 <ol>
 <li><p>Double all the numbers in a list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">doubled</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span> ]</span>)</span>
- <span class="comment">;=&gt; [ 2 4 6 8 ]</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">doubled</span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> ])
+ <span class="hljs-comment">;=&gt; [ 2 4 6 8 ]</span>
+</code></pre>
 <p> <span class="tag">Map</span></p>
 </li>
 <li><p>Extract all the even numbers from a list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">evens</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span> ]</span>)</span>
- <span class="comment">;=&gt; [ 1 3 5 7 ]</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">evens</span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> ])
+ <span class="hljs-comment">;=&gt; [ 1 3 5 7 ]</span>
+</code></pre>
 <p> <span class="tag">Filter</span></p>
 </li>
 <li><p>Multiply all the numbers in a list together</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">multiplied</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span> ]</span>)</span>
- <span class="comment">;=&gt; 120</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">multiplied</span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> ])
+ <span class="hljs-comment">;=&gt; 120</span>
+</code></pre>
 <p> <span class="tag">Reduce</span></p>
 </li>
 <li><p>Reverse a list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">reverse-list</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span> ]</span>)</span>
- <span class="comment">;=&gt; [ 5 4 3 2 1 ]</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">reverse-list</span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> ])
+ <span class="hljs-comment">;=&gt; [ 5 4 3 2 1 ]</span>
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 <li><p>Get the nth element in a list where the first item is &#39;1&#39;</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">get-element</span> <span class="collection">[<span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span> ]</span><span class="number"> 3</span>)</span>
- <span class="comment">;=&gt; 7</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">get-element</span> [ <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> ] <span class="hljs-number">3</span>)
+ <span class="hljs-comment">;=&gt; 7</span>
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 </ol>
 <h2 id="beginner">Beginner</h2>
 <ol>
 <li><p>Calculate the sum of the squares of all odd numbers in a list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">odd-square-sum</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span><span class="number"> 9</span> ]</span>)</span>
- <span class="comment">;=&gt; 155</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">odd-square-sum</span> [ <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span> ])
+ <span class="hljs-comment">;=&gt; 155</span>
+</code></pre>
 <p> <span class="tag">Filter</span> <span class="tag">Map</span> <span class="tag">Reduce</span></p>
 </li>
 <li><p>Extract a slice from a list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">slice</span> <span class="collection">[<span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span><span class="number"> 7</span><span class="number"> 8</span><span class="number"> 9</span> ]</span><span class="number"> 2</span><span class="number"> 4</span>)</span>
- <span class="comment">;=&gt; [ 5 6 7 8 ]</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">slice</span> [ <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span> ] <span class="hljs-number">2</span> <span class="hljs-number">4</span>)
+ <span class="hljs-comment">;=&gt; [ 5 6 7 8 ]</span>
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 <li><p>Generate the first n items of the fibonacci series.</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">fibn</span><span class="number"> 9</span>)</span>
- <span class="comment">;=&gt; [ 1 1 2 3 5 8 13 ]</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">fibn</span> <span class="hljs-number">9</span>)
+ <span class="hljs-comment">;=&gt; [ 1 1 2 3 5 8 13 ]</span>
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 <li><p>Improve the performance of the <code>fibn</code> function by adding memoisation.</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">fibn'</span><span class="number"> 9</span>)</span>
- <span class="comment">; =&gt; [ 1 1 2 3 5 8 13 ]</span>
- <span class="comment">; only recurses 7 times</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">fibn'</span> <span class="hljs-number">9</span>)
+ <span class="hljs-comment">; =&gt; [ 1 1 2 3 5 8 13 ]</span>
+ <span class="hljs-comment">; only recurses 7 times</span>
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 </ol>
 <h2 id="experienced">Experienced</h2>
 <ol>
 <li><p>Flatten a nested list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title"><span class="built_in">flatten</span></span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span><span class="number"> 6</span> <span class="collection">[<span class="number"> 7</span><span class="number"> 8</span><span class="number"> 9</span> ]</span><span class="number"> 10</span><span class="number"> 11</span><span class="number"> 12</span> ]</span> ]</span>)</span>
- <span class="comment">;=&gt; [ 1 2 3 4 5 6 7 8 9 10 11 12 ]</span></code></pre>
-<pre><code class="lang-haskell"> <span class="comment">-- Nested List type for haskell</span>
- <span class="typedef"><span class="keyword">data</span> <span class="type">Nested</span> a = <span class="type">Item</span> a | <span class="type">List</span> [<span class="type">Nested</span> a] <span class="keyword">deriving</span> <span class="container">(<span class="type">Show</span>)</span></span>
- <span class="type">List</span> [<span class="type">Item</span> <span class="number">1</span>, <span class="type">Item</span> <span class="number">2</span>, <span class="type">List</span> [<span class="type">Item</span> <span class="number">1</span>, <span class="type">Item</span> <span class="number">2</span>]]</code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name"><span class="hljs-builtin-name">flatten</span></span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> [ <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> [ <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span> ] <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">12</span> ] ])
+ <span class="hljs-comment">;=&gt; [ 1 2 3 4 5 6 7 8 9 10 11 12 ]</span>
+</code></pre>
+<pre><code class="lang-haskell"> <span class="hljs-comment">-- Nested List type for haskell</span>
+ <span class="hljs-class"><span class="hljs-keyword">data</span> <span class="hljs-type">Nested</span> a = <span class="hljs-type">Item</span> a | <span class="hljs-type">List</span> [<span class="hljs-type">Nested</span> a] <span class="hljs-keyword">deriving</span> (<span class="hljs-type">Show</span>)</span>
+ <span class="hljs-type">List</span> [<span class="hljs-type">Item</span> <span class="hljs-number">1</span>, <span class="hljs-type">Item</span> <span class="hljs-number">2</span>, <span class="hljs-type">List</span> [<span class="hljs-type">Item</span> <span class="hljs-number">1</span>, <span class="hljs-type">Item</span> <span class="hljs-number">2</span>]]
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 <li><p>Replace all occurences of an item with another in a nested list</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">substitute</span><span class="number"> 2</span><span class="number"> 5</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span> <span class="collection">[<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 2</span><span class="number"> 3</span> ]</span> <span class="collection">[<span class="number"> 1</span> <span class="collection">[<span class="number"> 2</span> ]</span><span class="number"> 3</span> ]</span> ]</span>)</span>
- <span class="comment">;=&gt; [ 1 5 3 [ 1 5 3 ] [ 1 5 5 3] [ 1 [ 5 ] 3 ]]</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">substitute</span> <span class="hljs-number">2</span> <span class="hljs-number">5</span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> [ <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> ] [ <span class="hljs-number">1</span> [ <span class="hljs-number">2</span> ] <span class="hljs-number">3</span> ] ])
+ <span class="hljs-comment">;=&gt; [ 1 5 3 [ 1 5 3 ] [ 1 5 5 3] [ 1 [ 5 ] 3 ]]</span>
+</code></pre>
 <p> <span class="tag">Recursion</span></p>
 </li>
 <li><p>Implement <code>deep-map</code>, <code>deep-filter</code> and <code>deep-reduce</code> which operate on nested
 lists.</p>
 <p>Use them to calculate the sum of all the squares of odd numbers in a
 nested list (see beginner #1)</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">odd-square-sum-deep</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span> <span class="collection">[<span class="number"> 6</span><span class="number"> 7</span> <span class="collection">[<span class="number"> 8</span> ]</span><span class="number"> 9</span> ]</span> ]</span>)</span>
- <span class="comment">;=&gt; 155</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">odd-square-sum-deep</span> [ <span class="hljs-number">4</span> <span class="hljs-number">5</span> [ <span class="hljs-number">6</span> <span class="hljs-number">7</span> [ <span class="hljs-number">8</span> ] <span class="hljs-number">9</span> ] ])
+ <span class="hljs-comment">;=&gt; 155</span>
+</code></pre>
 <p> <span class="tag">Recursion</span> <span class="tag">Map</span> <span class="tag">Filter</span> <span class="tag">Reduce</span></p>
 </li>
 <li><p>Implement <code>odd-square-sum-deep</code> using <code>flatten</code>. Which version is
 preferrable?</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">odd-square-sum-deep</span> <span class="collection">[<span class="number"> 4</span><span class="number"> 5</span> <span class="collection">[<span class="number"> 6</span><span class="number"> 7</span> <span class="collection">[<span class="number"> 8</span> ]</span><span class="number"> 9</span> ]</span> ]</span>)</span>
- <span class="comment">;=&gt; 155</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">odd-square-sum-deep</span> [ <span class="hljs-number">4</span> <span class="hljs-number">5</span> [ <span class="hljs-number">6</span> <span class="hljs-number">7</span> [ <span class="hljs-number">8</span> ] <span class="hljs-number">9</span> ] ])
+ <span class="hljs-comment">;=&gt; 155</span>
+</code></pre>
 <p><span class="tag">Map</span> <span class="tag">Filter</span> <span class="tag">Reduce</span></p>
 </li>
 </ol>
@@ -122,14 +136,16 @@ preferrable?</p>
 <ol>
 <li><p>Announce the winner of tic-tac-toe</p>
 <p> pick an appropriate 2d structure for your language</p>
-<pre><code class="lang-clojure"> <span class="list">(<span class="title">winner</span> <span class="collection">[ <span class="collection">[ <span class="attribute">:o</span> <span class="attribute">:e</span> <span class="attribute">:x</span> ]</span>
-           <span class="collection">[ <span class="attribute">:o</span> <span class="attribute">:x</span> <span class="attribute">:e</span> ]</span>
-           <span class="collection">[ <span class="attribute">:x</span> <span class="attribute">:e</span> <span class="attribute">:e</span> ]</span> ]</span>)</span>
- <span class="comment">;=&gt; :x</span></code></pre>
-<pre><code class="lang-haskell"> winner [[<span class="string">"x"</span>,<span class="string">"o"</span>,<span class="string">" "</span>]
-         [<span class="string">" "</span>,<span class="string">"o"</span>,<span class="string">" "</span>]
-         [<span class="string">"x"</span>,<span class="string">"o"</span>,<span class="string">" "</span>]]
- <span class="comment">-- =&gt; "o"</span></code></pre>
+<pre><code class="lang-clojure"> (<span class="hljs-name">winner</span> [ [ <span class="hljs-symbol">:o</span> <span class="hljs-symbol">:e</span> <span class="hljs-symbol">:x</span> ]
+           [ <span class="hljs-symbol">:o</span> <span class="hljs-symbol">:x</span> <span class="hljs-symbol">:e</span> ]
+           [ <span class="hljs-symbol">:x</span> <span class="hljs-symbol">:e</span> <span class="hljs-symbol">:e</span> ] ])
+ <span class="hljs-comment">;=&gt; :x</span>
+</code></pre>
+<pre><code class="lang-haskell"> winner [[<span class="hljs-string">"x"</span>,<span class="hljs-string">"o"</span>,<span class="hljs-string">" "</span>]
+         [<span class="hljs-string">" "</span>,<span class="hljs-string">"o"</span>,<span class="hljs-string">" "</span>]
+         [<span class="hljs-string">"x"</span>,<span class="hljs-string">"o"</span>,<span class="hljs-string">" "</span>]]
+ <span class="hljs-comment">-- =&gt; "o"</span>
+</code></pre>
 </li>
 <li><p>Implement a basic DSL evaluator that provides the following primitives:</p>
 <ul>
@@ -142,37 +158,39 @@ preferrable?</p>
 <li><code>(sheffield l n)</code> - append <code>n</code> to the list <code>l</code></li>
 <li><code>(meatspace l)</code>   - get the first item of a list</li>
 <li><p><code>(geek l1 l2)</code>    - Combine l1 and l2 into a single list</p>
-<pre><code class="lang-clojure"><span class="comment">; Clojure example</span>
-<span class="list">(<span class="title">defshef</span>
-  '<span class="list">(<span class="title">geek</span>
-      <span class="list">(<span class="title">burrito</span> <span class="list">(<span class="title">meatspace</span> <span class="list">(<span class="title">burrito</span><span class="number"> 1</span> <span class="list">(<span class="title">tap</span><span class="number"> 4</span>)</span>)</span>)</span><span class="number"> 1</span>)</span>
-      <span class="list">(<span class="title">sheffield</span>
-          <span class="list">(<span class="title">burrito</span> <span class="list">(<span class="title">steel</span> <span class="list">(<span class="title">cowering</span><span class="number"> 2</span>)</span>)</span><span class="number"> 2</span>)</span>
-          <span class="list">(<span class="title">steel</span> <span class="list">(<span class="title">cowering</span> <span class="list">(<span class="title">cowering</span> <span class="list">(<span class="title">tap</span><span class="number"> 1</span>)</span>)</span>)</span>)</span>)</span>)</span>)</span>
-<span class="comment">;=&gt; ???</span></code></pre>
+<pre><code class="lang-clojure"><span class="hljs-comment">; Clojure example</span>
+(<span class="hljs-name">defshef</span>
+  '(<span class="hljs-name">geek</span>
+      (<span class="hljs-name">burrito</span> (<span class="hljs-name">meatspace</span> (<span class="hljs-name">burrito</span> <span class="hljs-number">1</span> (<span class="hljs-name">tap</span> <span class="hljs-number">4</span>))) <span class="hljs-number">1</span>)
+      (<span class="hljs-name">sheffield</span>
+          (<span class="hljs-name">burrito</span> (<span class="hljs-name">steel</span> (<span class="hljs-name">cowering</span> <span class="hljs-number">2</span>)) <span class="hljs-number">2</span>)
+          (<span class="hljs-name">steel</span> (<span class="hljs-name">cowering</span> (<span class="hljs-name">cowering</span> (<span class="hljs-name">tap</span> <span class="hljs-number">1</span>)))))))
+<span class="hljs-comment">;=&gt; ???</span>
+</code></pre>
 <p>If you&#39;re not using a lisp, don&#39;t worry about trying to parse some input into a syntax tree, just define a data-type to use as your syntax tree.</p>
-<pre><code class="lang-haskell"><span class="comment">-- Haskell example</span>
-<span class="typedef"><span class="keyword">data</span> <span class="type">DefShef</span> =</span>
-  <span class="type">N</span> <span class="type">Int</span>
-  | <span class="type">L</span> [<span class="type">Int</span>]
-  | <span class="type">Cowering</span> <span class="type">DefShef</span>
-  | <span class="type">Burrito</span> <span class="type">DefShef</span> <span class="type">DefShef</span>
-  | <span class="type">Tap</span> <span class="type">DefShef</span>
-  | <span class="type">Steel</span> <span class="type">DefShef</span>
-  | <span class="type">Sheffield</span> <span class="type">DefShef</span> <span class="type">DefShef</span>
-  | <span class="type">Meatspace</span> <span class="type">DefShef</span>
-  | <span class="type">Geek</span> <span class="type">DefShef</span> <span class="type">DefShef</span>
-  <span class="keyword">deriving</span> (<span class="type">Show</span>)
+<pre><code class="lang-haskell"><span class="hljs-comment">-- Haskell example</span>
+<span class="hljs-class"><span class="hljs-keyword">data</span> <span class="hljs-type">DefShef</span> =</span>
+  <span class="hljs-type">N</span> <span class="hljs-type">Int</span>
+  | <span class="hljs-type">L</span> [<span class="hljs-type">Int</span>]
+  | <span class="hljs-type">Cowering</span> <span class="hljs-type">DefShef</span>
+  | <span class="hljs-type">Burrito</span> <span class="hljs-type">DefShef</span> <span class="hljs-type">DefShef</span>
+  | <span class="hljs-type">Tap</span> <span class="hljs-type">DefShef</span>
+  | <span class="hljs-type">Steel</span> <span class="hljs-type">DefShef</span>
+  | <span class="hljs-type">Sheffield</span> <span class="hljs-type">DefShef</span> <span class="hljs-type">DefShef</span>
+  | <span class="hljs-type">Meatspace</span> <span class="hljs-type">DefShef</span>
+  | <span class="hljs-type">Geek</span> <span class="hljs-type">DefShef</span> <span class="hljs-type">DefShef</span>
+  <span class="hljs-keyword">deriving</span> (<span class="hljs-type">Show</span>)
 
-<span class="title">defshef</span> :: <span class="type">DefShef</span> -&gt; <span class="type">DefShef</span>
-<span class="comment">-- implement defshef</span>
+<span class="hljs-title">defshef</span> :: <span class="hljs-type">DefShef</span> -&gt; <span class="hljs-type">DefShef</span>
+<span class="hljs-comment">-- implement defshef</span>
 
-<span class="title">defshef</span> (<span class="type">Geek</span>
-  (<span class="type">Burrito</span> (<span class="type">Meatspace</span> (<span class="type">Burrito</span> (<span class="type">N</span> <span class="number">1</span>) (<span class="type">Tap</span> (<span class="type">N</span> <span class="number">4</span>)))) (<span class="type">N</span> <span class="number">1</span>))
-  (<span class="type">Sheffield</span>
-      (<span class="type">Burrito</span> (<span class="type">Steel</span> (<span class="type">Cowering</span> (<span class="type">N</span> <span class="number">2</span>))) (<span class="type">N</span> <span class="number">2</span>))
-      (<span class="type">Steel</span> (<span class="type">Cowering</span> (<span class="type">Cowering</span> (<span class="type">Tap</span> (<span class="type">N</span> <span class="number">1</span>)))))))
-<span class="comment">-- =&gt; ???</span></code></pre>
+<span class="hljs-title">defshef</span> (<span class="hljs-type">Geek</span>
+  (<span class="hljs-type">Burrito</span> (<span class="hljs-type">Meatspace</span> (<span class="hljs-type">Burrito</span> (<span class="hljs-type">N</span> <span class="hljs-number">1</span>) (<span class="hljs-type">Tap</span> (<span class="hljs-type">N</span> <span class="hljs-number">4</span>)))) (<span class="hljs-type">N</span> <span class="hljs-number">1</span>))
+  (<span class="hljs-type">Sheffield</span>
+      (<span class="hljs-type">Burrito</span> (<span class="hljs-type">Steel</span> (<span class="hljs-type">Cowering</span> (<span class="hljs-type">N</span> <span class="hljs-number">2</span>))) (<span class="hljs-type">N</span> <span class="hljs-number">2</span>))
+      (<span class="hljs-type">Steel</span> (<span class="hljs-type">Cowering</span> (<span class="hljs-type">Cowering</span> (<span class="hljs-type">Tap</span> (<span class="hljs-type">N</span> <span class="hljs-number">1</span>)))))))
+<span class="hljs-comment">-- =&gt; ???</span>
+</code></pre>
 </li>
 </ul>
 </li>
